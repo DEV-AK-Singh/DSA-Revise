@@ -70,13 +70,13 @@ class SinglyLL:
                 prev = curr
                 curr = curr.next
             prev.next = curr.next
-            del curr
+            del curr 
 
-sll = SinglyLL() 
-sll.append(1)
-sll.append(3) 
-sll.append(4)
-sll.append(5)
-sll.insert(4, 10)
-sll.delete(4)
-sll.traversal()
+# sll = SinglyLL() 
+# sll.append(1)
+# sll.append(3) 
+# sll.append(4)
+# sll.append(5)
+# sll.insert(4, 10)
+# sll.delete(4)
+# sll.traversal()
