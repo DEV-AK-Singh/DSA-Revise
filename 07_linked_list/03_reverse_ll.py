@@ -1,6 +1,6 @@
-from base import SinglyLL
+base = __import__("01_base")
 
-sll = SinglyLL()
+sll = base.SinglyLL()
 
 sll.append(6)
 sll.append(8) 
