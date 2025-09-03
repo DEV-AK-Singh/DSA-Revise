@@ -10,12 +10,10 @@ def all_seq(index, total, subset):
         return
     if index >= len(nums): 
         return
-    subset.append(nums[index])
-    sum = total + nums[index]
-    all_seq(index+1, sum, subset)
-    ele = subset.pop()
-    sum = sum - ele
-    all_seq(index+1, sum, subset)
+    subset.append(nums[index]) 
+    all_seq(index+1, total + nums[index], subset)
+    subset.pop() 
+    all_seq(index+1, total, subset)
 
 all_seq(0, 0, [])
 
