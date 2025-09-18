@@ -15,4 +15,4 @@ class MyStack:
         return self.stack[-1] if len(self.stack) > 0 else -1
 
     def empty(self) -> bool:
-        return True if len(self.stack) > 0 else False
+        return False if len(self.stack) > 0 else True
