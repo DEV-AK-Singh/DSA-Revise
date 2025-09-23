@@ -34,17 +34,23 @@ f.right = h
  
 from collections import deque
 
-def dfs(node):
-    result = []
-    queue = deque([])
-    queue.append(node)
-    while len(queue) != 0:
-        e = queue.popleft()
-        result.append(e.val)
-        if e.left is not None:
-            queue.append(e.left)
-        if e.right is not None:
-            queue.append(e.right)
-    return result
-     
-print(dfs(a))
+# in [3,9,20,null,null,15,7]
+# out [[3],[9,20],[15,7]]
+
+def level_order(root):
+    if not root:
+        return []
+    q = deque()
+    q.append(root)
+    res = []
+    while q:
+        level = []
+        for _ in range(len(q)):
+            node = q.popleft()
+            level.append(node.val)
+            if node.left:
+                q.append(node.left)
+            if node.right:
+                q.append(node.right)
+        res.append(level)
+    return res
