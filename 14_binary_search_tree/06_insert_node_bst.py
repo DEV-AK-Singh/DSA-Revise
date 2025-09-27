@@ -34,17 +34,20 @@ f.right = h
 
 def insert_node_bst(node, key):
     temp = node
+    if node == None:
+        node = Node(key) 
     while temp != None:
         if temp.val > key:
             if temp.left == None:
                 temp.left = Node(key)
-                return
+                break
             temp = temp.left
         else:
             if temp.right == None:
                 temp.right = Node(key)
-                return
+                break
             temp = temp.right
+    return node
  
 def pre_order(root):
     if root == None:
